@@ -295,7 +295,7 @@ export default function Home() {
                             if(e.target.files?.[0]){
                                 setFile(e.target.files[0])
                             }
-                        }} />
+                        }}  accept="video/*"/>
                         <Button className="bg-blue-400 cursor-pointer w-full" onClick={onUpload} disabled={loading}>{loading?"Uploading":"Upload"}</Button>
                         <Dialog >
                             <DialogTrigger>
