@@ -451,14 +451,14 @@ export default function Home() {
 
                                 <div className="flex flex-row items-center gap-2"><IoIosTimer />
                                     {data ?
-                                        `  ${data?.metadataVideo.duration} s (${data?.metadataVideo.format})  `
+                                        `  ${data?.metadataVideo?.duration?.toFixed(2)} s (${data?.metadataVideo.format})  `
                                         : "-"
                                     }
                                 </div>
 
                                 <div className="flex flex-row items-center gap-2"><PiFloppyDisk />
                                     {data ?
-                                        `                                ${(data?.metadataVideo.size || 0 / (1024 * 1024)).toFixed(2)} Mb
+                                        `                                ${((data?.metadataVideo.size || 0) / (1024 * 1024)).toFixed(2)} Mb
 `                                : "-"
                                     }
                                 </div>
